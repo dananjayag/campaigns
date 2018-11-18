@@ -1,13 +1,41 @@
 import React, { Component } from 'react';
-import { Navbar } from '../../components/navbar/index'
+import  {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {onCreateCampaign} from './actions';
+import { Navbar } from '../../components/navbar/index';
+import  CampaignList  from '../campaingn/index';
+import './app.scss';
+
+/*
+    Root container 
+    with childen
+    @@{
+      Navbar,
+      CampaignList
+    }
+
+*/
 class App extends Component {
+
   render() {
     return (
       <div className="App">
-         <Navbar/>
+         <Navbar onCreateCampaign={this.props.onCreateCampaign}/>
+         <CampaignList/>
       </div>
     );
   }
 }
 
-export default App;
+function mapStateToProps(state){
+   return {
+
+   }
+}
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({
+    onCreateCampaign
+  },dispatch)
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(App);

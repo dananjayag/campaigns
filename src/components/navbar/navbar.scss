@@ -1,4 +1,91 @@
-.nav-bar{
-        background-color: aliceblue;
-        border-bottom: 1px solid blue;
+.nav-bar {
+         background-color: rgb(250, 251, 252);
+         border-bottom: 0.4px solid rgb(97, 153, 226);
+         h2{
+                 color: rgb(117, 114, 117);
+                 font-family: 'Roboto';
+                 font-size: 20px;
+                 font-weight: 500;
+                 padding: 20px;
+         }
+         h3{
+                font-family: 'Roboto';
+                font-size: 17px;
+                font-weight: 500;
+                color: #fff;
+                border-radius: 8px;
+                padding: 0px 10px;
+                background-color: #4476c1;
+                cursor: pointer;
+        }
+         ul{
+             line-height: 35px;
+             li {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                padding: 0px 20px;
+                display: inline-block;
+            }
+         }
+         .modal-holder{
+                 position: relative;
+                 height: 100%;
+                 z-index: 10001;
+                 position: fixed;
+                 width: 100%;
+                 background-color: #080808b8;
+         }
+         .modal{
+                 display: block;
+                 z-index: 1000;
+                 position: fixed;
+                 height: 400px;
+                 width: 400px;
+                 background-color:#fff;
+                 border : 1px solid #d8cdcd;
+                 box-shadow: #d8d0d0 2px 2px;
+                 left: 50%;
+                 top: 50%;
+                 transform: translate(-200px,-200px);
+                 .header{
+                         position: relative;
+                         .close{
+                                position: absolute;
+                                right: 13px;
+                                top: 12px;
+                                font-size: 23px;
+                                font-family: 'Roboto';
+                                color: black;
+                                cursor: pointer;
+                            
+                         }
+                 }
+                 .modal-content{
+                         margin-top : 70px;
+                         display:block;
+                         text-align: center;
+                         input[type="name"]{
+                                width: 80%;
+                                color: #000;
+                                background-color: #eef3f5;
+                                line-height: 50px;
+                                font-size: 20px;
+                                outline: none;
+                                padding: 5px 20px;
+                                border: 2px solid #278ccf;
+                                text-transform: capitalize;
+                         }
+                         input[type="submit"]{
+                                 margin-top: 30px;
+                                 font-size: 20px;
+                                 letter-spacing: 1px;
+                                 border-radius: 3px;
+                                 background-color:  #278ccf;
+                                 color: #fff;
+                                 cursor: pointer;
+                                 padding: 20px;
+                         }
+                 }
+         }
 }
